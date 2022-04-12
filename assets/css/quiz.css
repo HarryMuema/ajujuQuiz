@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: midnightblue;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+body.correct {
+    background-color: green;
+}
+
+body.wrong {
+    background-color: red;
+}
+
+.questions-container {
+    background-color: beige;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.question {
+    background-color: white;
+}
+
+.btn {
+    border: 2px solid midnightblue;
+}
+
+.start-btn,
+.next-btn {
+    background-color: rgb(72, 72, 210);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.btn:hover {
+    border-color: black;
+    transform: scale(1.1);
+}
+
+.btn.correct {
+    background-color: green;
+}
+
+.btn.wrong {
+    background-color: red;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
