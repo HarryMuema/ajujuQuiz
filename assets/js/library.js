@@ -1,3 +1,46 @@
+function joinFunction(e) {
+    e.preventDefault()
+    document.querySelector('.bg-modal').classList.remove('d-none')
+}
+
+function closeJoinFunction(e) {
+    e.preventDefault()
+    document.querySelector('.bg-modal').classList.add('d-none')
+}
+
+
+
+
+
+
+function getTitle(e) {
+    e.preventDefault()
+    let searchTitle = document.getElementById('quizTitle').value
+    localStorage.setItem('title', searchTitle)
+    document.location.href = 'quiz.html'
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let quizes = [{
     title: 'marvel',
     content: [{
@@ -48,6 +91,8 @@ let quizes = [{
     ]
 }]
 
-let userQuizes = []
 
-export { quizes, userQuizes }
+
+
+
+export { quizes, getTitle, joinFunction, closeJoinFunction }

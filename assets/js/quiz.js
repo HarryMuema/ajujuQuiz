@@ -1,9 +1,10 @@
-import { quizes, userQuizes } from "./library.js"
+import { quizes } from "./library.js"
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const questionsContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerBtns = document.getElementById('answer-btns')
+
 
 
 let shuffledQuestions, currentQuestionIndex
@@ -102,12 +103,18 @@ function findQuiz(myquiz, title) {
     return myquiz[index]
 }
 
+const searchTitle = localStorage.getItem('title')
+
 let setQuizes = JSON.parse(localStorage.getItem('quizList'))
 
 
-let choosenQuiz = findQuiz(setQuizes, 'eeee')
+let choosenQuiz = findQuiz(setQuizes, searchTitle)
+
+
 
 console.log(quizes)
+
+
 
 
 

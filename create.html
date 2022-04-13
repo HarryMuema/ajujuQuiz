@@ -48,7 +48,7 @@
                                 <a class="nav-link" href="#">Explore</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="quiz.html">Join a quiz</a>
+                                <a class="nav-link" href="quiz.html" id="join-quiz">Join a quiz</a>
                             </li>
                         </ul>
                     </div>
@@ -92,6 +92,8 @@
             </nav>
         </header>
     </section>
+
+
 
     <section class="title">
         <div class="container-fluid justify-content-center text-center">
@@ -138,12 +140,28 @@
                     </div>
 
                     <button type="submit" class="save-btn btn btn-primary" id="save-btn">Save</button>
-                    <button type="submit" class="save-btn btn btn-primary" id="done-btn">Done</button>
+                    <button type="submit" class="done-btn btn btn-primary" id="done-btn">Done</button>
                 </form>
             </div>
 
         </div>
     </section>
+
+    <div class="bg-modal d-none container-fluid text-center align-items-center justify-content-center">
+        <div class="modal-content text-center align-items-center">
+            <div class="close">
+                +
+            </div>
+            <img class=" w-25 h-15 p-2" src="/assets/images/quiz-icon.jpg" alt="quiz-icon">
+            <form class="modal-form mx-auto" method="get">
+                <div class="modal-input my-2">
+                    <label for="quizTitle" class="form-label text-uppercase fw-bold p-2">Enter quiz title</label>
+                    <input class="p-2 w-75" name="quizTitle" type="text" id="quizTitle">
+                </div>
+                <button type="submit" class="join-btn btn btn-primary mt-2 w-50 text-uppercase" id="join-btn">Join</button>
+            </form>
+        </div>
+    </div>
 
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

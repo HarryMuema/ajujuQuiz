@@ -1,6 +1,9 @@
-import { quizes, userQuizes } from './library.js'
+import { quizes, joinFunction, closeJoinFunction, getTitle } from './library.js'
 const saveButton = document.getElementById('save-btn')
 const doneButton = document.getElementById('done-btn')
+const joinButton = document.getElementById('join-quiz')
+const closeJoin = document.querySelector('.close')
+const joinLink = document.getElementById('join-btn')
 
 const isCorrect = document.querySelectorAll('input[type="radio"]')
 
@@ -88,6 +91,13 @@ function saveQuiz(e) {
 
 }
 
+
+
+
+
+
+//Button clicks
+
 document.addEventListener('DOMContentLoaded', () => {
     saveButton.addEventListener('click', saveContent)
 })
@@ -96,4 +106,14 @@ document.addEventListener('DOMContentLoaded', () => {
     doneButton.addEventListener('click', saveQuiz)
 })
 
-console.log(quizes)
+document.addEventListener('DOMContentLoaded', () => {
+    joinButton.addEventListener('click', joinFunction)
+})
+
+document.addEventListener('DOMContentLoaded', () => {
+    closeJoin.addEventListener('click', closeJoinFunction)
+})
+
+document.addEventListener('DOMContentLoaded', () => {
+    joinLink.addEventListener('click', getTitle)
+})
