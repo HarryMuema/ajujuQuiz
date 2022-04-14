@@ -20,18 +20,18 @@
 <body>
     <section class="headers">
         <header class="main-header">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-md navbar-light">
                 <div class="container-fluid">
                     <button class="navbar-toggler bg-primary btn-outline-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <a class="navbar-brand mx-auto" href="#">Ajụjụ</a>
+                    <a class="navbar-brand mx-auto px-4" href="#">Ajụjụ</a>
                     <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo04" aria-controls="navbarTogglerDemo04" aria-expanded="false" aria-label="Toggle navigation">
                         <span class=""><i class="fa fa-fw fa-plus-square-o"></i></span>
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <ul class="navbar-nav right-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link" aria-current="page" href="index.html">Home</a>
                             </li>
@@ -45,7 +45,7 @@
                     </div>
 
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo04">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <ul class="navbar-nav left-nav ms-auto mb-2 mb-lg-0 me-5">
                             <li class="nav-item">
                                 <a class="nav-link" aria-current="page" href="create.html">Create</a>
                             </li>
@@ -53,7 +53,7 @@
                                 <a class="nav-link" href="#">Explore</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="quiz.html">Join a quiz</a>
+                                <a class="nav-link" id="join-quiz" href="quiz.html">Join a quiz</a>
                             </li>
                         </ul>
                     </div>
@@ -62,22 +62,22 @@
             </nav>
         </header>
 
-        <header class="sub-header">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <header class="sub-header ">
+            <nav class="navbar navbar-expand-md navbar-light py-3 bg-light">
                 <div class="container-fluid">
-                    <button class="navbar-toggler mx-auto btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler p-2 mx-auto w-20 btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                         <span class=""><i class="fa fa-fw fa-sliders"></i></span>
                     </button>
-                    <form class=" navbar-brand mx-auto">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <form class="search  mx-auto w-20 ms-5 me-4">
+                        <input class=" form-control p-2 me-2" type="search" placeholder="Search" aria-label="Search">
                     </form>
-                    <button class=" mx-auto btn btn-outline-primary" type="submit">
+                    <button class="search-btn  mx-auto p-2 btn w-20 btn-outline-primary" type="submit">
                         <span class=""><i class="fa fa-fw fa-search"></i></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Math</a>
+                                <a class="nav-link" aria-current="page" href="#">Math</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Science </a>
@@ -98,12 +98,13 @@
         </header>
     </section>
 
-    <section class="featured">
-        <div class="container-fluid m-0">
-            <h2 class="featured-title p-5">Featured</h2>
-            <div class="feature-corousel">
-                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
+    <section class="featured   py-2 ">
+        <h2 class="featured-title  fw-bolder w-100  py-3 mt-0">Featured</h2>
+
+        <div class="featured-container container-fluid back-blue">
+            <div class="feature-corousel aspect-ratio m-0">
+                <div id="carouselExampleCaptions aspect-ratio" class="carousel slide p-2 text-center align-items-center justify-content-center" data-bs-ride="carousel">
+                    <div class="carousel-indicators ">
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
@@ -113,47 +114,47 @@
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
                     </div>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="assets/images/intro.png" class="d-block w-100" alt="intro">
+                        <div class="carousel-item active ">
+                            <img src="assets/images/intro.png" class="img-fluid aspect-ratio d-block w-100" alt="intro">
                         </div>
                         <div class="carousel-item">
-                            <img src="assets/images/harry-potter.jpg" class="d-block w-100" alt="harry potter">
-                            <div class="carousel-caption d-none d-md-block">
+                            <img src="assets/images/harry-potter.jpg" class="img-fluid d-block aspect-ratio w-100" alt="harry potter">
+                            <div class="carousel-caption text-white d-md-block">
                                 <h5>Harry Potter</h5>
                                 <p>All about the wizarding world.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="assets/images/globe-world.png" class="d-block w-100" alt="Globe">
-                            <div class="carousel-caption d-none d-md-block">
+                            <img src="assets/images/globe-world.png" class="img-fluid d-block aspect-ratio w-100" alt="Globe">
+                            <div class="carousel-caption d-md-block">
                                 <h5>Geography</h5>
                                 <p>Everything about the small ball we live in.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="assets/images/programming.png" class="d-block w-100" alt="programming">
-                            <div class="carousel-caption d-none d-md-block">
+                            <img src="assets/images/programming.png" class="img-fluid d-block aspect-ratio w-100" alt="programming">
+                            <div class="carousel-caption  d-md-block">
                                 <h5>Programming</h5>
                                 <p>The language of the machines and what we know about it.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="assets/images/worldmap (1).jpg" class="d-block w-100" alt="world map">
-                            <div class="carousel-caption d-none d-md-block">
+                            <img src="assets/images/worldmap (1).jpg" class="img-fluid d-block aspect-ratio w-100" alt="world map">
+                            <div class="carousel-caption  d-md-block">
                                 <h5>Locations</h5>
                                 <p>Do you know your cities.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="assets/images/geometry.jpeg" class="d-block w-100" alt="Geometry">
-                            <div class="carousel-caption d-none d-md-block">
+                            <img src="assets/images/geometry.jpeg" class="img-fluid d-block aspect-ratio w-100" alt="Geometry">
+                            <div class="carousel-caption  d-md-block">
                                 <h5>Geometry</h5>
                                 <p>Are you sure you looking at it from the right angle.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="assets/images/marvel.png" class="d-block w-100" alt="Marvel">
-                            <div class="carousel-caption d-none d-md-block">
+                            <img src="assets/images/marvel.png" class="img-fluid d-block aspect-ratio w-100" alt="Marvel">
+                            <div class="carousel-caption  d-md-block">
                                 <h5>Marvel</h5>
                                 <p>All things MCU.</p>
                             </div>
@@ -173,82 +174,92 @@
         </div>
     </section>
 
+    <section class="quiz-on  ">
+        <div class="quiz-on-container back-blue container-fluid justify-content-center text-center">
+            <h1 class="quizOn-title p-3">Quiz<span class="fw-bolder ">on!</span></h1>
+            <div class="quizOn-description">
+                <p class="paragraph-1">
+                    Get your first game going and see your group engaged like never before!<br>
+                    <Span><i class="fa fa-fw fa-arrow-down"></i></Span>
+                </p>
+            </div>
+            <div class="quizOn-buttons justify-content-center text-center">
+                <button class="quizOn-button btn-1 mx-auto btn btn-outline-primary px-1  text-uppercase" type="button">Create yours</button>
+                <button class="quizOn-button btn-2 mx-auto btn btn-outline-primary px-1  text-uppercase" type="button">Browse games</button>
+
+            </div>
+        </div>
+    </section>
+
     <section class="description">
-        <div class="container-fluid">
-            <div class="create justify-content-center text-center">
-                <h2 class="create-title p-5">Create</h2>
+        <div class="description-container container-fluid justify-content-center text-center ">
+            <div class="create justify-content-center text-center py-2 container-fluid">
+                <h2 class="create-title   py-4">Create</h2>
                 <div class="create-description">
                     <p class="paragraph">As the host, create new personalized quizes with personal questions and answers. Create a quiz specific for your group. </p>
                 </div>
-                <img src="assets/images/mobile.png" alt="phone">
             </div>
-            <div class="explore justify-content-center text-center">
-                <h2 class="explore-title p-5">Explore</h2>
+            <div class="create-img justify-content-center text-center py-2">
+                <img src="assets/images/mobile.png" class="image img-fluid aspect-ratio p-3" alt="phone">
+            </div>
+
+            <div class="explore justify-content-center text-center py-2">
+                <h2 class="explore-title  py-4">Explore</h2>
                 <div class="explore-description">
                     <p class="paragraph">Don’t have enough questions? Explore the inbuild library of different topics from different backgrounds. </p>
                 </div>
-                <img src="assets/images/mobile.png" alt="phone">
             </div>
-            <div class="answer justify-content-center text-center">
-                <h2 class="answer-title p-5">Answer</h2>
+            <div class="explore-img justify-content-center text-center py-2">
+                <img src="assets/images/mobile.png" class="image img-fluid aspect-ratio p-3" alt="phone">
+            </div>
+
+            <div class="answer justify-content-center text-center py-2">
+                <h2 class="answer-title  py-4">Answer</h2>
                 <div class="answer-description">
                     <p class="paragraph">Participants answer questions on their own device. Throughout a quiz, each participant will get exposure to the questions for a specified time period per question </p>
                 </div>
-                <img src="assets/images/mobile.png" alt="phone">
             </div>
+            <div class="answer-img justify-content-center text-center py-2">
+                <img src="assets/images/mobile.png" class="image img-fluid aspect-ratio p-3" alt="phone">
+            </div>
+
         </div>
     </section>
 
-    <section class="quiz-on">
-        <div class="container-fluid justify-content-center text-center">
-            <h1 class="quizOn-title p-3">Quiz<span class="fw-bolder px-3">on!</span></h1>
-            <div class="quizOn-description">
-                <p class="paragraph">
-                    Get your first game going and see your group engaged like never before!
-                </p>
-            </div>
-            <button class=" mx-auto btn btn-outline-primary px-3" type="button">Create</button>
-        </div>
-    </section>
 
-    <footer class="bg-dark text-white pt-3">
+
+    <footer class=" text-white pt-2">
         <div class="container-fluid d-grid text-center">
             <div class="row row-cols-sm-2 mb-3">
-                <div class="col-md-2 col-sm-6 mb-3 pt-2">
-                    <h2 class="text-uppercase text-secondary fw-light fs-6">My account</h2>
+                <div class="col-md-2 col-sm-3 mb-3 pt-2">
+                    <h2 class="text-uppercase fw-light fs-6">My account</h2>
                     <h3><a class="text-white fw-light fs-6" href="#">Sign in</a></h3>
                     <h3><a class="text-white fw-light fs-6" href="#">Register</a></h3>
-                    <h3><a class="text-white fw-light fs-6" href="#">Order status</a></h3>
+
                 </div>
-                <div class="col-md-2 col-sm-6 mb-3 pt-2">
-                    <h2 class="text-uppercase text-secondary fw-light fs-6">About</h2>
+                <div class="col-md-2 col-sm-3 mb-3 pt-2">
+                    <h2 class="text-uppercase fw-light fs-6">About</h2>
                     <h3><a class="text-white fw-light fs-6" href="#">Our story</a></h3>
                     <h3><a class="text-white fw-light fs-6" href="#">Media</a></h3>
-                    <h3><a class="text-white fw-light fs-6" href="#">Sustainability</a></h3>
+
                 </div>
-                <div class="col-md-2 col-sm-6 mb-3 pt-2">
-                    <h2 class="text-uppercase text-secondary fw-light fs-6">Help</h2>
-                    <h3><a class="text-white fw-light fs-6" href="#">Shipping</a></h3>
-                    <h3><a class="text-white fw-light fs-6" href="#">Returns</a></h3>
-                    <h3><a class="text-white fw-light fs-6" href="#">Sizing</a></h3>
-                </div>
-                <div class="col-md-2 col-sm-6 mb-3 pt-2">
-                    <h2 class="text-uppercase text-secondary fw-light fs-6">Legal</h2>
+
+                <div class="col-md-2 col-sm-3 mb-3 pt-2">
+                    <h2 class="text-uppercase fw-light fs-6">Legal</h2>
                     <h3><a class="text-white fw-light fs-6" href="#">Terms of use</a></h3>
-                    <h3><a class="text-white fw-light fs-6" href="#">Terms of sale</a></h3>
                     <h3><a class="text-white fw-light fs-6" href="#">Privacy policy</a></h3>
                 </div>
 
-                <div class="col-md-4 col-sm-12 mb-3 pt-2">
-                    <h2 class="text-secondary fw-light fs-6">Follow Ajụjụ</h2>
+                <div class="col-md-6 col-sm-3 mb-3 pt-2">
+                    <h2 class=" fw-light fs-6">Follow Ajụjụ</h2>
                     <div class="d-flex text-center justify-content-center">
-                        <h3 class="px-4 text-center"><a class="text-center text-white fw-light fs-6" href="#"><i
+                        <h3 class="px-2 text-center"><a class="text-center text-white fw-light fs-6" href="#"><i
                                     class="fa fa-facebook-official"></i></a></h3>
-                        <h3 class="px-4 text-center"><a class="text-center text-white fw-light fs-6" href="#"><i
+                        <h3 class="px-2 text-center"><a class="text-center text-white fw-light fs-6" href="#"><i
                                     class="fa fa-instagram"></i></a></h3>
-                        <h3 class="px-4 text-center"><a class="text-center text-white fw-light fs-6" href="#"><i
+                        <h3 class="px-2 text-center"><a class="text-center text-white fw-light fs-6" href="#"><i
                                     class="fa fa-twitter"></i></a></h3>
-                        <h3 class="px-4 text-center"><a class="text-center text-white fw-light fs-6" href="#"><i
+                        <h3 class="px-2 text-center"><a class="text-center text-white fw-light fs-6" href="#"><i
                                     class="fa fa-linkedin"></i></a></h3>
                     </div>
                 </div>
@@ -256,11 +267,27 @@
             </div>
             <div class="row mb-0">
                 <div class="col-md-12 col-sm-12 mb-5 pt-2">
-                    <h3 class="text-secondary fw-light fs-6 ">&copy;2020 Episkey Limited.All Rights Reserved</h3>
+                    <h3 class="text-secondary fw-light fs-6">&copy;2020 Episkey Limited.All Rights Reserved</h3>
                 </div>
             </div>
         </div>
     </footer>
+
+    <div class="bg-modal d-none container-fluid text-center align-items-center justify-content-center">
+        <div class="modal-content text-center align-items-center">
+            <div class="close">
+                +
+            </div>
+            <img class=" img-fluid imagess p-2" src="/assets/images/quiz-icon.jpg" alt="quiz-icon">
+            <form class="modal-form mx-auto" method="get">
+                <div class="modal-input my-2">
+                    <label for="quizTitle" class="form-label text-uppercase fw-bold p-2">Enter quiz title</label>
+                    <input class="p-2 w-75" name="quizTitle" type="text" id="quizTitle">
+                </div>
+                <button type="submit" class="join-btn btn btn-primary mt-2 w-50 text-uppercase" id="join-btn">Join</button>
+            </form>
+        </div>
+    </div>
 
 
 
@@ -268,6 +295,7 @@
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script type="module" src="assets/js/main.js"></script>
 </body>
 
 </html>
