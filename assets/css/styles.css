@@ -377,7 +377,7 @@ footer h2 {
         transition: transform 500ms ease;
     }
     .card-1 {
-        background-image: url('assets/images/harry-potter.jpg');
+        background-image: url('./assets/images/harry-potter.jpg');
         background-size: cover;
         padding: 1rem 0 0;
     }
