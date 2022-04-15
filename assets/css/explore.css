@@ -1,0 +1,214 @@
+body {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    background-color: rgba(1, 3, 50, 1);
+    align-items: center;
+}
+
+.navbar {
+    background-color: rgb(158, 158, 158);
+}
+
+
+/* change the brand and text color */
+
+.navbar .navbar-brand,
+.navbar .navbar-text {
+    color: blue;
+    background-color: black;
+    border-radius: 1rem;
+}
+
+.navbar-toggler,
+span {
+    font-size: 15px;
+}
+
+.media-scroller {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1rem;
+    /* padding: 10px 10px 10px 10px; */
+    /* overflow-x: auto; */
+    /* overscroll-behavior-inline: contain; */
+}
+
+.media-element {
+    grid-template-rows: min-content;
+    gap: .5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: dimgrey;
+}
+
+.media-row {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
+    padding: 0px 30px 0 30px;
+}
+
+.card {
+    color: white;
+    font-weight: 20px;
+    font-size: 15px;
+    max-height: 500px;
+    aspect-ratio: 16/10;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 100ch;
+    overflow: hidden;
+    transition: transform 500ms ease;
+}
+
+.card:hover,
+.card:focus-within {
+    transform: scale(1.05);
+}
+
+.card-content {
+    --padding: 1.5rem;
+    padding: var(--padding);
+    background: linear-gradient(hsl(0 0% 0% / 0.0), hsl(20 0% 0% / 0.3) 10%, hsl(0 0% 0% / 1));
+}
+
+.card-title {
+    position: relative;
+    width: max-content;
+}
+
+.card-title::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: calc(100% + var(--padding));
+    left: calc(var(--padding)*-1);
+    bottom: -2px;
+    background-color: rgb(0, 0, 255);
+    transform-origin: left;
+    transition: transform 1500ms ease;
+}
+
+.card:hover .card-title::after,
+.card:focus-within .card-title::after {
+    transform: scale(1);
+}
+
+.button {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: blue;
+    padding: 0.5em 1.25em;
+    border-radius: 0.5rem;
+}
+
+.button:hover,
+.button:focus,
+.button:focus-within {
+    background-color: white;
+    color: black;
+}
+
+@media (hover) {
+    .card-content {
+        transform: translateY(60%);
+        transition: transform 1000ms ease;
+    }
+    .card:hover .card-content,
+    .card:focus-within .card-content {
+        transform: translateY(0%);
+        transition-delay: 500ms;
+    }
+    .card:focus-within .card-content {
+        transition-duration: 0ms;
+    }
+    .card-content>*:not(.card-title) {
+        opacity: 0;
+        transition: transform 1000ms linear;
+    }
+    .card:hover .card-content>*:not(.card-title),
+    .card:focus-within .card-content>*:not(.card-title) {
+        opacity: 1;
+        transition-delay: 2000ms;
+    }
+    .card-title::after {
+        transform: scale(0);
+    }
+}
+
+.card-1 {
+    background-image: url('/assets/images/harry-potter.jpg');
+    background-size: cover;
+    /* padding: 0 0 0; */
+}
+
+.card-2 {
+    background-image: url('/assets/images/globe-world.png');
+    background-size: cover;
+    /* padding: 1.5rem 0 0; */
+}
+
+.card-3 {
+    background-image: url('/assets/images/programming.png');
+    background-size: cover;
+    /* padding: 0 0 0; */
+}
+
+.card-4 {
+    background-image: url('/assets/images/worldmap\ \(1\).jpg');
+    background-size: cover;
+    /* padding: 3rem 0 0; */
+}
+
+.card-5 {
+    background-image: url('/assets/images/geometry.jpeg');
+    background-size: cover;
+    /* padding: 1.5rem 0 0; */
+}
+
+.card-6 {
+    background-image: url('/assets/images/marvel.png');
+    background-size: cover;
+    /* padding: 3rem 0 0; */
+}
+
+.bg-modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+}
+
+.modal-content {
+    width: 75%;
+    height: 40%;
+    background-color: white;
+    position: relative;
+}
+
+.imagess {
+    aspect-ratio: 16/9;
+    max-height: 100px;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 30px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.close:hover {
+    transform: scale(2) rotate(45deg);
+}

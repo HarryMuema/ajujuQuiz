@@ -1,18 +1,31 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
-
 body {
     padding: 0;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
     background-color: midnightblue;
     width: 100vw;
     height: 100vh;
     justify-content: center;
     align-items: center;
+}
+
+.navbar {
+    background-color: rgb(158, 158, 158);
+}
+
+
+/* change the brand and text color */
+
+.navbar .navbar-brand,
+.navbar .navbar-text {
+    color: blue;
+    background-color: black;
+    border-radius: 1rem;
+}
+
+.navbar-toggler,
+span {
+    font-size: 15px;
 }
 
 body.correct {

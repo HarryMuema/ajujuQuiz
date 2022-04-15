@@ -18,7 +18,6 @@ nextButton.addEventListener('click', () => {
 
 
 function startGame() {
-
     startButton.classList.add('hide')
     shuffledQuestions = choosenQuiz.content.sort(() => Math.random() - 0.5)
     currentQuestionIndex = 0
@@ -37,13 +36,13 @@ function showQuestion(questions) {
         const button = document.createElement('button')
         button.innerText = answer.text
         if (index === 0) {
-            button.classList.add('btn', 'btn-warning', 'w-100', 'my-2', 'py-3')
+            button.classList.add('btn', 'btn-warning', 'text-black', 'w-100', 'my-2', 'py-3')
         } else if (index === 1) {
-            button.classList.add('btn', 'btn-primary', 'w-100', 'my-2', 'py-3')
+            button.classList.add('btn', 'btn-primary', 'text-black', 'w-100', 'my-2', 'py-3')
         } else if (index === 2) {
-            button.classList.add('btn', 'btn-dark', 'w-100', 'my-2', 'py-3')
+            button.classList.add('btn', 'btn-dark', 'text-white', 'w-100', 'my-2', 'py-3')
         } else {
-            button.classList.add('btn', 'btn-secondary', 'w-100', 'my-2', 'py-3')
+            button.classList.add('btn', 'btn-secondary', 'text-black', 'w-100', 'my-2', 'py-3')
         }
 
         if (answer.correct == 'true') {
@@ -103,9 +102,12 @@ function findQuiz(myquiz, title) {
     return myquiz[index]
 }
 
+
 const searchTitle = localStorage.getItem('title')
 
 let setQuizes = JSON.parse(localStorage.getItem('quizList'))
+
+
 
 
 let choosenQuiz = findQuiz(setQuizes, searchTitle)

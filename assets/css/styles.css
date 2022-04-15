@@ -1,0 +1,596 @@
+body {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    background-color: rgb(158, 158, 158);
+}
+
+
+/* change the brand and text color */
+
+.navbar .navbar-brand,
+.navbar .navbar-text {
+    color: blue;
+    background-color: black;
+    border-radius: 1rem;
+}
+
+.navbar-toggler,
+span {
+    font-size: 15px;
+}
+
+.back-blue {
+    background-color: rgba(1, 3, 50, 1);
+    bottom: 0;
+}
+
+.featured>.featured-title {
+    background-color: white;
+    padding-left: 10px;
+}
+
+.featured-container {
+    border-radius: 1.5rem;
+    width: 98%;
+}
+
+.media-scroller {
+    display: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 34%;
+    gap: 1rem;
+    padding: 0 1rem 1rem 1rem;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+}
+
+.media-element {
+    grid-template-rows: min-content;
+    gap: .5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: dimgrey;
+}
+
+.snaps-inline {
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 1rem;
+}
+
+.snaps-inline>* {
+    scroll-snap-align: start;
+}
+
+.card:hover,
+.card:focus-within {
+    transform: scale(1.05);
+}
+
+.card-content {
+    --padding: 1.5rem;
+    padding: var(--padding);
+    background: linear-gradient(hsl(0 0% 0% / 0.0), hsl(20 0% 0% / 0.3) 10%, hsl(0 0% 0% / 1));
+}
+
+.card-title {
+    position: relative;
+    width: max-content;
+}
+
+.card-title::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: calc(100% + var(--padding));
+    left: calc(var(--padding)*-1);
+    bottom: -2px;
+    background-color: rgb(0, 0, 255);
+    transform-origin: left;
+    transition: transform 1500ms ease;
+}
+
+.card:hover .card-title::after,
+.card:focus-within .card-title::after {
+    transform: scale(1);
+}
+
+.button {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: blue;
+    padding: 0.5em 1.25em;
+    border-radius: 0.5rem;
+}
+
+.button:hover,
+.button:focus,
+.button:focus-within {
+    background-color: white;
+    color: black;
+}
+
+@media (hover) {
+    .card-content {
+        transform: translateY(60%);
+        transition: transform 1000ms ease;
+    }
+    .card:hover .card-content,
+    .card:focus-within .card-content {
+        transform: translateY(0%);
+        transition-delay: 500ms;
+    }
+    .card:focus-within .card-content {
+        transition-duration: 0ms;
+    }
+    .card-content>*:not(.card-title) {
+        opacity: 0;
+        transition: transform 1000ms linear;
+    }
+    .card:hover .card-content>*:not(.card-title),
+    .card:focus-within .card-content>*:not(.card-title) {
+        opacity: 1;
+        transition-delay: 2000ms;
+    }
+    .card-title::after {
+        transform: scale(0);
+    }
+}
+
+.aspect-ratio {
+    aspect-ratio: 17/17;
+}
+
+.quizOn-title {
+    font-size: 25px;
+    color: white;
+}
+
+.quizOn-title span {
+    font-size: 45px;
+    color: blue;
+}
+
+.quizOn-description>.paragraph-1 {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.quizOn-description>.paragraph-1 span {
+    color: blue;
+    font-size: 15px;
+}
+
+.quizOn-button {
+    margin: 15px;
+    width: 75%;
+}
+
+.quiz-on-container {
+    border-radius: 1.5rem;
+    width: 98%;
+}
+
+.description h2 {
+    font-size: 40px;
+    color: blue;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(241, 241, 241, 0.845));
+}
+
+.paragraph {
+    letter-spacing: 2px;
+    line-height: 25px;
+}
+
+.carousel-caption {
+    background: linear-gradient(hsl(0 0% 0% / 0.0), hsl(20 0% 0% / 0.3) 10%, hsl(0 0% 0% / 1));
+}
+
+footer {
+    background-color: rgba(1, 3, 50, 1);
+}
+
+footer h2 {
+    color: blue;
+}
+
+.bg-modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+}
+
+.modal-content {
+    width: 75%;
+    height: 40%;
+    background-color: white;
+    position: relative;
+}
+
+.imagess {
+    aspect-ratio: 16/9;
+    max-height: 100px;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 30px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.close:hover {
+    transform: scale(2) rotate(45deg);
+}
+
+@media (min-width:400px) {
+    .featured-container {
+        border-radius: 1rem;
+        width: 90%;
+    }
+    .featured>.featured-title {
+        background-color: white;
+        padding-left: 10%;
+    }
+    .feature-corousel {
+        height: 80%;
+        max-height: 390px;
+    }
+    .aspect-ratio {
+        aspect-ratio: 16/8;
+    }
+    .quizOn-title {
+        font-size: 35px;
+        color: white;
+    }
+    .quizOn-title span {
+        font-size: 70px;
+        color: blue;
+    }
+    .quizOn-description>.paragraph-1 {
+        color: white;
+        letter-spacing: 5px;
+        font-size: 22px;
+    }
+    .quizOn-description>.paragraph-1 span {
+        color: blue;
+        font-size: 20px;
+    }
+    .quiz-on-container {
+        width: 90%;
+        border-radius: 1rem;
+    }
+    .quizOn-button {
+        margin-left: 15px;
+        width: 45%;
+        top: 0;
+    }
+    .quizOn-buttons {
+        display: flex;
+        flex-direction: row;
+    }
+    .description-container {
+        width: 90%;
+        margin-bottom: 50px;
+    }
+    .description h2 {
+        font-size: 40px;
+        color: blue;
+        margin-top: 50px;
+        background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(241, 241, 241, 0.845));
+    }
+    .paragraph {
+        letter-spacing: 4px;
+        line-height: 30px;
+        font-size: 15px;
+        padding: 20px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .image {
+        transform: scale(2);
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+@media(min-width:580px) {
+    .search {
+        margin-left: 250px;
+    }
+    .description-container {
+        width: 90%;
+        display: grid;
+        grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(5rem, 5rem)) minmax(1em, 1fr);
+        gap: 2em;
+    }
+    .create {
+        grid-column: 1/4;
+        grid-row: 1/2;
+    }
+    .create-img {
+        grid-column: 4/-1;
+        grid-row: 1/2;
+    }
+    .explore-img {
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+    .explore {
+        grid-column: 3/-1;
+        grid-row: 2/3;
+    }
+    .answer {
+        grid-column: 1/4;
+        grid-row: 3/4;
+    }
+    .answer-img {
+        grid-column: 4/-1;
+        grid-row: 3/4;
+    }
+    .image {
+        transform: scale(2);
+        margin-top: 150px;
+        margin-bottom: 50px;
+    }
+    .quizOn-button {
+        width: 40%;
+        top: 0;
+    }
+    .quizOn-buttons {
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+        padding-bottom: 5%;
+    }
+}
+
+@media (min-width:900px) {
+    .media-scroller {
+        display: grid;
+    }
+    .card {
+        color: white;
+        font-weight: 30px;
+        max-height: 500px;
+        aspect-ratio: 16/21;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        /* max-width: 100ch; */
+        overflow: hidden;
+        transition: transform 500ms ease;
+    }
+    .card-1 {
+        background-image: url('/assets/images/harry-potter.jpg');
+        background-size: cover;
+        padding: 1rem 0 0;
+    }
+    .card-2 {
+        background-image: url('/assets/images/globe-world.png');
+        background-size: cover;
+        padding: 1rem 0 0;
+    }
+    .card-3 {
+        background-image: url('/assets/images/programming.png');
+        background-size: cover;
+        padding: 0 0 0;
+    }
+    .card-4 {
+        background-image: url('/assets/images/worldmap\ \(1\).jpg');
+        background-size: cover;
+        padding: 3rem 0 0;
+    }
+    .card-5 {
+        background-image: url('/assets/images/geometry.jpeg');
+        background-size: cover;
+        padding: .1rem 0 0;
+    }
+    .card-6 {
+        background-image: url('/assets/images/marvel.png');
+        background-size: cover;
+        padding: 4rem 0 0;
+    }
+    .feature-corousel {
+        display: none;
+    }
+    .description-container {
+        width: 60%;
+        display: grid;
+        grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(5rem, 5rem)) minmax(1em, 1fr);
+        gap: 2em;
+    }
+    .featured-container {
+        width: 70%;
+    }
+    .quiz-on-container {
+        width: 70%;
+    }
+    .aspect-ratio {
+        aspect-ratio: 20/5;
+    }
+    .footer {
+        font-size: 24px;
+    }
+}
+
+@media (min-width:1200px) {
+    .card {
+        color: white;
+        font-weight: 30px;
+        max-height: 500px;
+        aspect-ratio: 16/15;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        /* max-width: 100ch; */
+        overflow: hidden;
+        transition: transform 500ms ease;
+    }
+    .card-1 {
+        background-image: url('/assets/images/harry-potter.jpg');
+        background-size: cover;
+        padding: 2rem 0 0;
+    }
+    .card-2 {
+        background-image: url('/assets/images/globe-world.png');
+        background-size: cover;
+        padding: 1.5rem 0 0;
+    }
+    .card-3 {
+        background-image: url('/assets/images/programming.png');
+        background-size: cover;
+        padding: 0 0 0;
+    }
+    .card-4 {
+        background-image: url('/assets/images/worldmap\ \(1\).jpg');
+        background-size: cover;
+        padding: 3rem 0 0;
+    }
+    .card-5 {
+        background-image: url('/assets/images/geometry.jpeg');
+        background-size: cover;
+        padding: 1.5rem 0 0;
+    }
+    .card-6 {
+        background-image: url('/assets/images/marvel.png');
+        background-size: cover;
+        padding: 3rem 0 0;
+    }
+}
+
+@media (min-width:1200px) {
+    .card {
+        color: white;
+        font-weight: 30px;
+        max-height: 500px;
+        aspect-ratio: 16/15;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        /* max-width: 100ch; */
+        overflow: hidden;
+        transition: transform 500ms ease;
+    }
+    .card-1 {
+        background-image: url('/assets/images/harry-potter.jpg');
+        background-size: cover;
+        padding: 7rem 0 0;
+    }
+    .card-2 {
+        background-image: url('/assets/images/globe-world.png');
+        background-size: cover;
+        padding: 5.5rem 0 0;
+    }
+    .card-3 {
+        background-image: url('/assets/images/programming.png');
+        background-size: cover;
+        padding: 6rem 0 0;
+    }
+    .card-4 {
+        background-image: url('/assets/images/worldmap\ \(1\).jpg');
+        background-size: cover;
+        padding: 7rem 0 0;
+    }
+    .card-5 {
+        background-image: url('/assets/images/geometry.jpeg');
+        background-size: cover;
+        padding: 5.8rem 0 0;
+    }
+    .card-6 {
+        background-image: url('/assets/images/marvel.png');
+        background-size: cover;
+        padding: 7rem 0 0;
+    }
+}
+
+@media(min-width:2000px) {
+    .description-container {
+        width: 60%;
+        display: grid;
+        grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(10rem, 30rem)) minmax(1em, 1fr);
+        gap: 4em;
+    }
+    .featured-container {
+        width: 70%;
+    }
+    .quiz-on-container {
+        width: 70%;
+    }
+    .aspect-ratio {
+        aspect-ratio: 20/5;
+    }
+    .featured>.featured-title {
+        background-color: white;
+        padding-left: 20%;
+        font-size: 100px;
+    }
+    .feature-corousel {
+        height: 80%;
+        max-height: 1200px;
+    }
+    .quizOn-title {
+        font-size: 120px;
+        color: white;
+    }
+    .quizOn-title span {
+        font-size: 200px;
+        color: blue;
+    }
+    .quizOn-description>.paragraph-1 {
+        color: white;
+        letter-spacing: 15px;
+        font-size: 80px;
+    }
+    .quizOn-description>.paragraph-1 span {
+        color: blue;
+        font-size: 50px;
+    }
+    .quizOn-button {
+        width: 45%;
+        font-size: 80px;
+        top: 0;
+    }
+    .quizOn-buttons {
+        width: 40%;
+        margin-left: 30%;
+        margin-right: 30%;
+        padding-bottom: 5%;
+    }
+    .description h2 {
+        font-size: 80px;
+        font-weight: 700;
+        color: blue;
+        margin-top: 150px;
+        background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(241, 241, 241, 0.845));
+    }
+    .paragraph {
+        letter-spacing: 15px;
+        line-height: 150px;
+        font-size: 100px;
+        padding: 100px;
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+    .image {
+        transform: scale(7);
+        margin-top: 700px;
+        margin-bottom: 350px;
+    }
+    .footer {
+        font-size: 300px;
+    }
+}
